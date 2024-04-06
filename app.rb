@@ -5,5 +5,6 @@ get '/' do
 end
 
 post '/reverse' do
-    # Some Ruby code to show us the reverse string
+    @reversed_string = params[:string_to_reverse].reverse
+    erb :result
 end
